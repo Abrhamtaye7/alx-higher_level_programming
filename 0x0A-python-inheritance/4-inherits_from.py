@@ -1,21 +1,20 @@
 #!/usr/bin/python3
-"""Only sub class of.
-Author: Kanneh
 
+"""
+File: 4-inherits_from.py
+Desc: This file contains a single function defination.
+Author: Abrham Taye
+Date Created: Aug 1 2022
 """
 
 
 def inherits_from(obj, a_class):
-    """A function that returns True if the object is
-    an instance of a class that inherited (directly or indirectly)
-    from the specified class;
-    otherwise False.
-
-    Args:
-        obj(any): object of the class
-        a_class(type): describes the class
-
     """
-    if isinstance(type(obj), a_class) and type(obj) != a_class:
+    This function  returns True if the object is an
+    instance of a class that inherited (directly or indirectly)
+    from the specified class ; otherwise False.
+    """
+
+    if isinstance(obj, a_class) and type(obj) != a_class:
         return True
     return False

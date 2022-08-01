@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-""" Improve Geometry.
-Author: Kanneh
-
+"""
+Improve Geometry.
+Author: Abrham Taye
+Date Created: Aug 1 2022
 """
 
 

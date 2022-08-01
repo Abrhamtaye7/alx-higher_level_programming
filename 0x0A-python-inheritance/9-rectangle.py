@@ -1,34 +1,39 @@
 #!/usr/bin/python3
 
-"""Defines a class Rectangle that inherits
-from the BaseGeometry class.
-
 """
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+File: 9-rectangle.py
+Desc: This module contains a single class defination.
+Author: Abrham Taye
+Date Created: Aug 1 2022
+"""
+B = __import__('7-base_geometry').BaseGeometry
 
 
-class Rectangle(BaseGeometry):
-    """A class Rectangle that inherits
-    from the BaseGeometry
-
+class Rectangle(B):
+    """
+    This class inherits from BaseGeometry super class.
     """
 
     def __init__(self, width, height):
-        """Instantiation of width and height"""
-        super().integer_validator("width", width)
+        """
+        This function makes Instantiation of width and height
+        """
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
         self.__width = width
-        super().integer_validator("height", height)
         self.__height = height
 
     def area(self):
-        """Returns the area of the rectangle"""
-        return self.__width * self.__height
+        """
+        This function computes the area of the rectangle.
+        """
+        return self.__height * self.__width
 
     def __str__(self):
-        """Return the print() and str()
-        representation of a Rectangle.
-
         """
-        string = "[" + str(self.__class__.__name__) + "] "
-        string += str(self.__width) + "/" + str(self.__height)
-        return string
+        The string representation of the instances of the class
+        Rectangle with magic method __str__().
+        """
+
+        return ("[" + str(self.__class__.__name__) + "] " +
+                str(self.__width) + "/" + str(self.__height))
