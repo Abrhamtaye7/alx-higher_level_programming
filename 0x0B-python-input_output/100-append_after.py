@@ -1,24 +1,22 @@
 #!/usr/bin/python3
-
 """
-File: 100-append_after.py
-Desc: This module deals with automating files.
-Author: Abrham Taye 
-Date Created: Aug 2 2022
+This module contains one function
 """
 
 
 def append_after(filename="", search_string="", new_string=""):
     """
-    This function inserts a line of text to a file, after each
-    line containing a specific string
+    inserts a line of text to a file,
+    after each line containing a specific string
     """
-    with open(filename, encoding="utf8") as my_file:
-        line_list = my_file.readlines()
-        new_content = ""
-        for line in line_list:
-            new_content += line
+    with open(filename, 'r') as f:
+        text = ""
+        l = -1
+        while l != 0:
+            line = f.readline()
+            l = len(line)
+            text += line
             if search_string in line:
-                new_content += new_string
-    with open(filename, "w", encoding="utf8") as f:
-        f.write(new_content)
+                text += new_string
+    with open(filename, 'w') as f:
+        f.write(text)
