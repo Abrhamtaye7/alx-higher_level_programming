@@ -1,23 +1,20 @@
 #!/usr/bin/python3
+
 """
-Student to JSON
+File: 9-student.py
+Desc: This module deals with classes and json
+Author: Abrham Taye 
+Date Created: Aug 2 2022
 """
 
 
-class Student:
+class Student():
     """
-    Represent a student.
+    A simple stundent class.
     """
-
     def __init__(self, first_name, last_name, age):
         """
-        Initializes a new Student.
-
-        Args:
-            first_name (str): The first name of the student.
-            last_name (str): The last name of the student.
-            age (int): The age of the student.
-
+        This function initializes the object parameters.
         """
         self.first_name = first_name
         self.last_name = last_name
@@ -25,6 +22,7 @@ class Student:
 
     def to_json(self):
         """
-        Gets a dictionary representation of the Student.
+        This function retrieves a dictionary representation
+        of a Student instance
         """
         return self.__dict__

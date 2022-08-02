@@ -1,17 +1,18 @@
 #!/usr/bin/python3
+
 """
-Read file
+File: 0-read_file.py
+Desc: This module deals with reading files.
+Author: Abrham Taye 
+Date Created: Aug 2 2022
 """
 
 
 def read_file(filename=""):
     """
-    a function that reads a text file (UTF8)
-    and prints it to stdout
-
-    Args:
-        filename(any): name of the file
-
+    This function reads a text file (UTF8) and prints it to stdout.
     """
-    with open(filename, encoding="utf-8") as f:
-        print(f.read(), end="")
+
+    with open(filename, encoding="utf8") as my_file:
+        for text in my_file:
+            print(text, end="")

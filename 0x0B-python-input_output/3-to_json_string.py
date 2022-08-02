@@ -1,16 +1,17 @@
 #!/usr/bin/python3
+
 """
-To JSON string
+File: 3-to_json_string.py
+Desc: This module deals with JSON string.
+Author: Abrham Taye 
+Date Created: Aug 2 2022
 """
-import json
+from json import dumps as d
 
 
 def to_json_string(my_obj):
     """
-    A JSON to string function
-
-    Return:
-        the JSON representation of an object (string):
-
+    This function returns the JSON representation of an object (string)
     """
-    return json.dumps(my_obj)
+
+    return d(my_obj)

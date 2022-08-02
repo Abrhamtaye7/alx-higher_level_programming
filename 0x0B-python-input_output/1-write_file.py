@@ -1,20 +1,18 @@
 #!/usr/bin/python3
+
 """
-Write to a file
+File: 1-write_file.py
+Desc: This module deals with writing to files.
+Author: Abrham Taye 
+Date Created: Aug 2 2022
 """
 
 
 def write_file(filename="", text=""):
     """
-    Write a string to a UTF8 text file.
-
-    Args:
-        filename (str): The name of the file to write.
-        text (str): The text to write to the file.
-
-    Returns:
-        The number of characters written.
-
+    This function writes a string to a text file (UTF8) and
+    returns the number of characters written
     """
-    with open(filename, "w", encoding="utf-8") as f:
-        return f.write(text)
+
+    with open(filename, "w", encoding="utf8") as my_file:
+        return (my_file.write(text))

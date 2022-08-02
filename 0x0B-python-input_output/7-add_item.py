@@ -1,20 +1,24 @@
 #!/usr/bin/python3
-"""
-Load, add, save
-A script that adds all arguments to a Python list,
-and then save them to a file
 
 """
-import sys
+File: 7-add_item.py
+Desc: This module deals with loading, adding, and savig.
+Author: Abrham Taye 
+Date Created: Aug 2 2022
+"""
+from sys import argv as av
+from os.path import exists
+save = __import__('5-save_to_json_file').save_to_json_file
+load = __import__('6-load_from_json_file').load_from_json_file
 
-if __name__ == "__main__":
-    save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
-    load_from_json_file = \
-        __import__('8-load_from_json_file').load_from_json_file
+name = "add_item.json"
 
-    try:
-        items = load_from_json_file("add_item.json")
-    except FileNotFoundError:
-        items = []
-    items.extend(sys.argv[1:])
-    save_to_json_file(items, "add_item.json")
+av.remove(av[0])
+pre_loaded = []
+
+if exists('add_item.json'):
+    pre_loaded = load(name)
+
+pre_loaded += av
+
+save(pre_loaded, name)

@@ -1,14 +1,17 @@
 #!/usr/bin/python3
+
 """
-From JSON string to Object
+File: 4-from_json_string.py
+Desc: This module deals with the json object.
+Author: Abrham Taye 
+Date Created: Aug 2 2022
 """
-import json
+from json import loads as ls
 
 
 def from_json_string(my_str):
     """
-    Return the Python object representation of a
-    JSON string.
-
+    This function returns an object (Python data structure)
+    represented by a JSON string
     """
-    return json.loads(my_str)
+    return ls(my_str)
